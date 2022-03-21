@@ -1,0 +1,56 @@
+.card-wrrapper {
+    position : relative;
+}
+
+
+.cards-main-div {
+    border-radius: 25px;
+    box-shadow: 0 0 8px #DED5ED;
+    padding: 25px;
+    position: relative;
+
+}
+
+.grades-header {
+    text-align: center;
+}
+.medalion {
+    width:100px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    border-radius:15px 0 0 0;
+}
+
+.gifts {
+    color:#DEC071;
+    font-size:15px;
+    text-align: center;
+}
+
+.cards-main-div > h3 {
+    text-align: end;
+}
+
+
+.school-data-div > h5 {
+    color:grey;
+    text-align: end;
+}
+
+.leading-classes-wrrapper {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .leading-classes-wrrapper {
+        flex-direction: column;
+}
+.card-wrrapper {
+    margin : 20px
+}
+  }
