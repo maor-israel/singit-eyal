@@ -2,6 +2,8 @@ import AvgGradePerAssigment from "../../components/js/avgGradePerAssigment";
 import FinallAvgGrade from "../../components/js/finallAvgGrade";
 import LeadingClasses from "../../components/js/leadingClasses";
 import LeadersTable from "../../components/js/table";
+import useWindowDimensions from "../../helpers/screenDimentions";
+
 import "../css/firstScreen.css";
 // const isMobile = true;
 
@@ -169,6 +171,25 @@ const tableDummyData = [
   },
 ];
 
+const dummyColumnsMobile = [
+  "מטלות",
+  "ציון סופי",
+  "תלמידים",
+  "כיתה",
+  "בית ספר",
+  "מקום",
+];
+
+const dummyColumns = [
+  "ציון ממוצע סופי",
+  "ציון ממוצע למטלה",
+  "תלמידים",
+  "כיתה",
+  "בית ספר",
+  "מקום",
+];
+
+
 const cardsDummyData = [
   {
     finallGrade: 80,
@@ -215,6 +236,8 @@ const cardsDummyData = [
 ];
 
 const FirstScreen = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <>
       <br></br>
@@ -233,7 +256,10 @@ const FirstScreen = () => {
       <LeadingClasses classes={cardsDummyData} />
       <br></br>
       <br></br>
-        <LeadersTable data={tableDummyData}></LeadersTable>
+      <LeadersTable
+        colums={width > 900 ? dummyColumnsMobile : dummyColumns}
+        data={tableDummyData}
+      ></LeadersTable>
       <br></br>
       <br></br>
     </>

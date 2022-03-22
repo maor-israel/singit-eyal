@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import useWindowDimensions from "../../helpers/screenDimentions";
 import "../css/table.css";
 
-
-const LeadersTable = ({ data }) => {
+const LeadersTable = ({ data, colums }) => {
   const [dataInfo, setDataInfo] = useState([]);
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     setDataInfo(data);
@@ -30,7 +31,7 @@ const LeadersTable = ({ data }) => {
           type={"text"}
         />
         <button
-        className="search-button"
+          className="search-button"
           onClick={() => {
             let id = document.getElementById("search-input");
             id.value = null;
@@ -44,23 +45,25 @@ const LeadersTable = ({ data }) => {
         </h3>
       </div>
 
-
       <table id="table">
         <thead id="table-head">
-            <tr>
-              <td>ציון ממוצע למטלה</td>
-              <td>ציון ממוצע סופי</td>
-              <td>תלמידים</td>
-              <td>כיתה</td>
-              <td>בית ספר</td>
-              <td>מקום</td>
-            </tr>
+          <tr>
+            {colums.map((column, index) => (
+              <td key={index}>{column}</td>
+            ))}
+          </tr>
         </thead>
         <tbody>
           {dataInfo.map((row, index) => {
             return (
               <tr key={index}>
-                <td>{row.avgGradePerAssignment}</td>
+                {width > 900 ? (
+                  <td>{row.avgGradePerAssignment}</td>
+                ) : (
+                  <td>
+                    <button>click</button>
+                  </td>
+                )}
                 <td>{row.overallAvgGrade}</td>
                 <td>{row.howManyStudents}</td>
                 <td>{row.grade}</td>
