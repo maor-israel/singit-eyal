@@ -69,7 +69,7 @@ const LeadersTable = ({ data, colums }) => {
                   <td>{row.avgGradePerAssignment}</td>
                 ) : (
                   <td>
-                    <button>click</button>
+                    <button>צפייה במטלות</button>
                   </td>
                 )}
                 <td>{row.overallAvgGrade}</td>
