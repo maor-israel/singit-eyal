@@ -24,6 +24,13 @@ const LeadersTable = ({ data, colums }) => {
   return (
     <div className="table-component-wrraper">
       <div id="search-wrapper">
+        {width > 900 ? (
+          <h3 className="participating-classes-table-header">
+            :כל בתי הספר המשתתפים
+          </h3>
+        ) : (
+          ""
+        )}
         <input
           onBlur={onFinish}
           id="search-input"
@@ -40,9 +47,6 @@ const LeadersTable = ({ data, colums }) => {
         >
           נקה חיפוש
         </button>
-        <h3 className="participating-classes-table-header">
-          :כל בתי הספר המשתתפים
-        </h3>
       </div>
 
       <table id="table">

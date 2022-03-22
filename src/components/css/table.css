@@ -72,11 +72,9 @@
 @media only screen and (max-width: 900px) {
 
     .participating-classes-table-header {
-        text-align: right;
-        position: absolute;
-        right: 0px;
-
+        text-align: center;
     }
+    
     .table-component-wrraper {
         min-width: 100%; 
         max-width: 100%; 
