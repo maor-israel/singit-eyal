@@ -6,13 +6,13 @@ const AssigmentsBadge = ({ assigment, index }) => {
       <div className="avg-grade-per-assigment">
         {assigment.classAverage && assigment.classAverage}
       </div>
-      <h4 style={{margin:"auto"}}># {index && index}</h4>
+      <h4 style={{ margin: "auto" }}># {index && index}</h4>
     </div>
   );
 };
-const AvgGradePerAssigment = ({ lessons }) => {
+const AvgGradePerAssigment = ({ lessons, ...htmlAttributes }) => {
   return (
-    <div className="avg-grade-per-assigment-wrraper">
+    <div className="avg-grade-per-assigment-wrraper" {...htmlAttributes}>
       {lessons.map((assigment, index) => {
         return (
           <AssigmentsBadge assigment={assigment} index={index} key={index} />

@@ -4,6 +4,8 @@
 }
 
 
+
+
 .avg-grade-per-assigment-center {
     display: flex;
     flex-direction: column; 
@@ -21,6 +23,18 @@
         width: 40px;
         padding: 10px;
         box-shadow: 0 0 4px black;
-        height: 40px;
+        margin: 2px auto;
+}
+
+.avg-grade-per-assigment-mobile-table {
+        border-radius: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: #7A55B5;
+        width: 40px;
+        padding: 10px;
+        box-shadow: 0 0 4px black;
         margin: 2px auto;
 }

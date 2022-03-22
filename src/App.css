@@ -1,45 +1,46 @@
-table, th, td {
-  border-top: 1.5px solid #7A55B5;
-  border-bottom: 1.5px solid #7A55B5;
+table,
+th,
+td {
+  border-top: 1.5px solid #7a55b5;
+  border-bottom: 1.5px solid #7a55b5;
   border-collapse: collapse;
-  padding : 10px;
+  padding: 10px;
   text-align: center;
 }
 
+tr td:last-child {
+  border-left: 1px solid #7a55b5;
+}
 #logo {
   text-align: right;
-  margin : 50px;
-  font-size:60px;
-  color: #7A55B5;
-  text-shadow:0 0 8px #9B80C8;
-  font-family: 'Pacifico', cursive;
+  margin: 50px;
+  font-size: 60px;
+  color: #7a55b5;
+  text-shadow: 0 0 8px #9b80c8;
+  font-family: "Pacifico", cursive;
 }
 
 tr {
   background: white;
+  position: relative;
 }
-
 
 .App {
-  background-color: #F9F9F9;
-  font-family: 'Fredoka', sans-serif;
+  background-color: #f9f9f9;
+  font-family: "Fredoka", sans-serif;
 }
-
-
-
 
 @media only screen and (max-width: 900px) {
   tr {
-    border-top: 10px solid #F9F9F9;
-    border-bottom: 10px solid #F9F9F9;
-}
+    border-top: 10px solid #f9f9f9;
+    border-bottom: 10px solid #f9f9f9;
+    margin : 10px 0;
+  }
 
-
-td {
-  border-top: 10px solid #F9F9F9;
-  border-bottom: 10px solid #F9F9F9;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-}
-
+  td {
+    border-top: 10px solid #f9f9f9;
+    border-bottom: 10px solid #f9f9f9;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
 }

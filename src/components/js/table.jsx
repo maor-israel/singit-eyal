@@ -8,7 +8,6 @@ const LeadersTable = ({ data, colums }) => {
   const [dataInfo, setDataInfo] = useState([]);
   const { width } = useWindowDimensions();
 
-
   useEffect(() => {
     setDataInfo(data);
   }, [data]);
@@ -22,6 +21,12 @@ const LeadersTable = ({ data, colums }) => {
     } else {
       setDataInfo(data);
     }
+  };
+
+  const handleWatchTasks = (e) => {
+    e.target.parentElement.lastChild.style.display === "flex"
+      ? (e.target.parentElement.lastChild.style.display = "none")
+      : (e.target.parentElement.lastChild.style.display = "flex");
   };
 
   return (
@@ -81,7 +86,23 @@ const LeadersTable = ({ data, colums }) => {
               return (
                 <tr key={index}>
                   <td>
-                    <button>צפייה במטלות</button>
+                    <div>
+                      <button onClick={handleWatchTasks}>צפייה במטלות</button>
+                      <AvgGradePerAssigment
+                        style={{
+                          position: "absolute",
+                          transform: "translateX(30%)",
+                          justifyContent: "space-between",
+                          width: "70%",
+                          background: "white",
+                          zIndex: "2",
+                          top: 0,
+                          display: "none",
+                          height : "50px",
+                        }}
+                        lessons={row.lessons}
+                      />
+                    </div>
                   </td>
                   <td>{row.average}</td>
                   <td>{row.studentsCount}</td>
