@@ -3,7 +3,6 @@ import "../css/LeadingClassesCards.css";
 import FinallAvgGrade from "./finallAvgGrade";
 import medal from "../../assets/meal.png";
 
-
 const LeadingClassesCards = ({
   schoolName,
   gift,
@@ -11,23 +10,28 @@ const LeadingClassesCards = ({
   studentsCount,
   finallGrade,
   lessons,
+  place,
 }) => {
   return (
     <div className="card-wrrapper">
-
-
-      <h3 className="gifts">{gift && gift}</h3>
+      <h2 className="gifts">
+        {place === 1
+          ? "5,000₪ לכיתה"
+          : place === 2
+          ? "אוזניות לכל הכיתה"
+          : place === 3
+          ? "כרגע כלום ושום דבר"
+          : null}
+      </h2>
 
       <div className="cards-main-div">
         <img className="medalion" src={medal} alt="exmp"></img>
         <h3>{schoolName ?? schoolName}</h3>
 
-
         <div className="school-data-div">
           <h5>{name ?? name}</h5>
           <h5>{studentsCount ?? studentsCount} תלמידים</h5>
         </div>
-
 
         <h4 className="grades-header">ציון ממוצע למטלה</h4>
         <AvgGradePerAssigment
@@ -40,16 +44,13 @@ const LeadingClassesCards = ({
   );
 };
 
-
-
-
 const LeadingClasses = ({ classes }) => {
-
   return (
     <div className="leading-classes-wrrapper">
-      {classes.slice(0, 3).map((item,index) => {
+      {classes.slice(0, 3).map((item, index) => {
         return (
           <LeadingClassesCards
+            place={index + 1}
             key={index}
             finallGrade={item.average}
             lessons={item.lessons}

@@ -218,8 +218,6 @@ const FirstScreen = () => {
 
   return (
     <>
-      <br></br>
-
       <div style={{ display: "flex", justifyContent: "center" }}>
         <button
           className="all-schools-list-button"

@@ -14,7 +14,7 @@ const LeadersTable = ({ data, colums }) => {
 
   const onFinish = (text) => {
     const filteredData = dataInfo.filter((item) =>
-      item.name.includes(text.target.value)
+      item.schoolName.includes(text.target.value)
     );
     if (text.target.value !== "") {
       setDataInfo(filteredData);
