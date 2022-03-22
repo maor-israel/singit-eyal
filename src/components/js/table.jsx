@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import useWindowDimensions from "../../helpers/screenDimentions";
 import "../css/table.css";
+import AvgGradePerAssigment from "./avgGradePerAssigment";
+import FinallAvgGrade from "../js/finallAvgGrade";
 
 const LeadersTable = ({ data, colums }) => {
   const [dataInfo, setDataInfo] = useState([]);
   const { width } = useWindowDimensions();
+
 
   useEffect(() => {
     setDataInfo(data);
@@ -12,7 +15,7 @@ const LeadersTable = ({ data, colums }) => {
 
   const onFinish = (text) => {
     const filteredData = dataInfo.filter((item) =>
-      item.school.includes(text.target.value)
+      item.name.includes(text.target.value)
     );
     if (text.target.value !== "") {
       setDataInfo(filteredData);
@@ -55,7 +58,7 @@ const LeadersTable = ({ data, colums }) => {
 
       <table id="table">
         <thead id="table-head">
-          <tr>
+          <tr id="table-head">
             {colums.map((column, index) => (
               <td key={index}>{column}</td>
             ))}
@@ -63,22 +66,31 @@ const LeadersTable = ({ data, colums }) => {
         </thead>
         <tbody>
           {dataInfo.map((row, index) => {
-            return (
-              <tr key={index}>
-                {width > 900 ? (
-                  <td>{row.avgGradePerAssignment}</td>
-                ) : (
+            if (width > 900) {
+              return (
+                <tr key={index}>
+                  <td>{<AvgGradePerAssigment lessons={row.lessons} />}</td>
+                  <td>{<FinallAvgGrade isForTable grade={row.average} />}</td>
+                  <td>{row.studentsCount}</td>
+                  <td>{row.name}</td>
+                  <td>{row.schoolName}</td>
+                  <td>{index}</td>
+                </tr>
+              );
+            } else {
+              return (
+                <tr key={index}>
                   <td>
                     <button>צפייה במטלות</button>
                   </td>
-                )}
-                <td>{row.overallAvgGrade}</td>
-                <td>{row.howManyStudents}</td>
-                <td>{row.grade}</td>
-                <td>{row.school}</td>
-                <td>{index}</td>
-              </tr>
-            );
+                  <td>{row.average}</td>
+                  <td>{row.studentsCount}</td>
+                  <td>{row.name}</td>
+                  <td>{row.schoolName}</td>
+                  <td>{index}</td>
+                </tr>
+              );
+            }
           })}
         </tbody>
       </table>

@@ -8,17 +8,17 @@
     box-shadow: 0 0 8px #DED5ED;
     padding: 25px;
     position: relative;
-
+    background: white;
 }
 
 .grades-header {
     text-align: center;
 }
 .medalion {
-    width:100px;
+    width:80px;
     position:absolute;
     top:0px;
-    left:0px;
+    left:10px;
     border-radius:15px 0 0 0;
 }
 

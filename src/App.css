@@ -3,11 +3,26 @@ table, th, td {
   border-bottom: 1.5px solid #7A55B5;
   border-collapse: collapse;
   padding : 10px;
+  text-align: center;
+}
+
+#logo {
+  text-align: right;
+  margin : 50px;
+  font-size:60px;
+  color: #7A55B5;
+  text-shadow:0 0 8px #9B80C8;
+  font-family: 'Pacifico', cursive;
+}
+
+tr {
+  background: white;
 }
 
 
-body {
+.App {
   background-color: #F9F9F9;
+  font-family: 'Fredoka', sans-serif;
 }
 
 
@@ -15,8 +30,8 @@ body {
 
 @media only screen and (max-width: 900px) {
   tr {
-    border-top: 10px solid ;
-    border-bottom: 10px solid;
+    border-top: 10px solid #F9F9F9;
+    border-bottom: 10px solid #F9F9F9;
 }
 
 

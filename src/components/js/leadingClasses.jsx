@@ -1,16 +1,16 @@
 import AvgGradePerAssigment from "./avgGradePerAssigment";
 import "../css/LeadingClassesCards.css";
 import FinallAvgGrade from "./finallAvgGrade";
-import medal from "../../assets/meal.jpeg";
+import medal from "../../assets/meal.png";
 
 
 const LeadingClassesCards = ({
   schoolName,
   gift,
-  nameOfClass,
-  numberOfStudents,
+  name,
+  studentsCount,
   finallGrade,
-  gradesPerAssigment,
+  lessons,
 }) => {
   return (
     <div className="card-wrrapper">
@@ -24,16 +24,16 @@ const LeadingClassesCards = ({
 
 
         <div className="school-data-div">
-          <h5>{nameOfClass ?? nameOfClass}</h5>
-          <h5>{numberOfStudents ?? numberOfStudents} תלמידים</h5>
+          <h5>{name ?? name}</h5>
+          <h5>{studentsCount ?? studentsCount} תלמידים</h5>
         </div>
 
 
         <h4 className="grades-header">ציון ממוצע למטלה</h4>
         <AvgGradePerAssigment
-          avgGradePerAssigment={gradesPerAssigment ?? gradesPerAssigment}
+          lessons={lessons ?? lessons}
         ></AvgGradePerAssigment>
-        <h5 className="grades-header">ציון סופי ממוצע</h5>
+        <h4 className="grades-header">ציון ממוצע סופי</h4>
         <FinallAvgGrade grade={finallGrade ?? finallGrade}></FinallAvgGrade>
       </div>
     </div>
@@ -44,18 +44,18 @@ const LeadingClassesCards = ({
 
 
 const LeadingClasses = ({ classes }) => {
+
   return (
     <div className="leading-classes-wrrapper">
-      {classes.map((item,index) => {
+      {classes.slice(0, 3).map((item,index) => {
         return (
           <LeadingClassesCards
             key={index}
-            finallGrade={item.finallGrade}
-            gradesPerAssigment={item.gradesPerAssigment}
-            numberOfStudents={item.numberOfStudents}
-            nameOfClass={item.nameOfClass}
+            finallGrade={item.average}
+            lessons={item.lessons}
+            studentsCount={item.studentsCount}
+            name={item.name}
             schoolName={item.schoolName}
-            gift={item.gift}
           ></LeadingClassesCards>
         );
       })}

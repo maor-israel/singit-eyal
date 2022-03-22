@@ -1,5 +1,3 @@
-import AvgGradePerAssigment from "../../components/js/avgGradePerAssigment";
-import FinallAvgGrade from "../../components/js/finallAvgGrade";
 import LeadingClasses from "../../components/js/leadingClasses";
 import LeadersTable from "../../components/js/table";
 import useWindowDimensions from "../../helpers/screenDimentions";
@@ -11,163 +9,17 @@ import "../css/firstScreen.css";
 const tableDummyData = [
   {
     key: 1,
-    place: 1,
-    school: "John Brown",
-    grade: "ו-2",
-    city: "בת ים",
-    howManyStudents: 23,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={78}></FinallAvgGrade>,
-  },
-  {
-    key: 2,
-    place: 2,
-    school: "John Brown",
-    grade: "ו-4",
-    city: "חיפה",
-    howManyStudents: 43,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={90}></FinallAvgGrade>,
-  },
-  {
-    key: 1,
-    place: 1,
-    school: "John Brown",
-    grade: "ו-2",
-    city: "בת ים",
-    howManyStudents: 23,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={78}></FinallAvgGrade>,
-  },
-  {
-    key: 2,
-    place: 2,
-    school: "John Brown",
-    grade: "ו-4",
-    city: "חיפה",
-    howManyStudents: 43,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={90}></FinallAvgGrade>,
-  },
-  {
-    key: 1,
-    place: 1,
-    school: "John Brown",
-    grade: "ו-2",
-    city: "בת ים",
-    howManyStudents: 23,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={78}></FinallAvgGrade>,
-  },
-  {
-    key: 2,
-    place: 2,
-    school: "John Brown",
-    grade: "ו-4",
-    city: "חיפה",
-    howManyStudents: 43,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={90}></FinallAvgGrade>,
-  },
-  {
-    key: 1,
-    place: 1,
-    school: "John Brown",
-    grade: "ו-2",
-    city: "בת ים",
-    howManyStudents: 23,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={78}></FinallAvgGrade>,
-  },
-  {
-    key: 2,
-    place: 2,
-    school: "John Brown",
-    grade: "ו-4",
-    city: "חיפה",
-    howManyStudents: 43,
-    avgGradePerAssignment: (
-      <AvgGradePerAssigment
-        avgGradePerAssigment={[
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-          { grade: 80, name: "maor" },
-        ]}
-      ></AvgGradePerAssigment>
-    ),
-    overallAvgGrade: <FinallAvgGrade isForTable grade={90}></FinallAvgGrade>,
+    schoolName: "John Brown",
+    name: "ו-2",
+    studentsCount: 23,
+    average: 78,
+    lessons: [
+      { classAverage: 80 },
+      { classAverage: 80 },
+      { classAverage: 80 },
+      { classAverage: 80 },
+      { classAverage: 80 },
+    ],
   },
 ];
 
@@ -189,49 +41,105 @@ const dummyColumns = [
   "מקום",
 ];
 
-
 const cardsDummyData = [
   {
-    finallGrade: 80,
-    gradesPerAssigment: [
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
+    average: 80,
+    lessons: [
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
     ],
-    numberOfStudents: 28,
-    nameOfClass: "כיתה ו 1 קרית גת",
+    studentsCount: 24,
+    name: `כיתה ו 1 קרית גת`,
     schoolName: "בית הספר אגמים",
-    gift: "אוזניות לכל הכיתה ",
   },
   {
-    finallGrade: 80,
-    gradesPerAssigment: [
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
+    average: 80,
+    lessons: [
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
     ],
-    numberOfStudents: 28,
-    nameOfClass: "כיתה ו 1 קרית גת",
+    studentsCount: 24,
+    name: "כיתה ו 1 קרית גת",
     schoolName: "בית הספר אגמים",
-    gift: "אוזניות לכל הכיתה ",
   },
   {
-    finallGrade: 80,
-    gradesPerAssigment: [
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
-      { grade: 80, name: "maor" },
+    average: 80,
+    lessons: [
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
+      {
+        classAverage: 74,
+        finished: 1,
+        score: 7400,
+      },
     ],
-    numberOfStudents: 28,
-    nameOfClass: "כיתה ו 1 קרית גת",
+    studentsCount: 24,
+    name: "כיתה ו 1 קרית גת",
     schoolName: "בית הספר אגמים",
-    gift: "אוזניות לכל הכיתה ₪",
   },
 ];
 
@@ -257,7 +165,7 @@ const FirstScreen = () => {
       <br></br>
       <br></br>
       <LeadersTable
-        colums={width > 900 ? dummyColumnsMobile : dummyColumns}
+        colums={width < 900 ? dummyColumnsMobile : dummyColumns}
         data={tableDummyData}
       ></LeadersTable>
       <br></br>
