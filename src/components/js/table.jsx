@@ -37,16 +37,20 @@ const LeadersTable = ({ data, colums }) => {
           placeholder="חיפוש לפי בית ספר או עיר"
           type={"text"}
         />
-        <button
-          className="search-button"
-          onClick={() => {
-            let id = document.getElementById("search-input");
-            id.value = null;
-            setDataInfo(data);
-          }}
-        >
-          נקה חיפוש
-        </button>
+        {width > 900 ? (
+          <button
+            className="search-button"
+            onClick={() => {
+              let id = document.getElementById("search-input");
+              id.value = null;
+              setDataInfo(data);
+            }}
+          >
+            נקה חיפוש
+          </button>
+        ) : (
+          ""
+        )}
       </div>
 
       <table id="table">
