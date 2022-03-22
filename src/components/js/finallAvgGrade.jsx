@@ -5,7 +5,10 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
 
   const regularStylesWrraper = {
     position: "absolute",
-    right: "44%",
+    display: "flex",
+    justifyContent : "center",
+    width : "100%",
+    transform : "translateX(-7%)"
   };
 
   const regularStylesMainDiv = {
