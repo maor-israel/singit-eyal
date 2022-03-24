@@ -5,6 +5,7 @@ import AvgGradePerAssigment from "./avgGradePerAssigment";
 import FinallAvgGrade from "../js/finallAvgGrade";
 
 const LeadersTable = ({ data, colums }) => {
+
   const [dataInfo, setDataInfo] = useState([]);
   const { width } = useWindowDimensions();
 
@@ -29,10 +30,11 @@ const LeadersTable = ({ data, colums }) => {
       : (e.target.parentElement.lastChild.style.display = "flex");
   };
 
+
   return (
     <div className="table-component-wrraper">
       <div id="search-wrapper">
-        {width > 900 ? (
+        {width > 1125 ? (
           <h3 className="participating-classes-table-header">
             :כל בתי הספר המשתתפים
           </h3>
@@ -45,7 +47,7 @@ const LeadersTable = ({ data, colums }) => {
           placeholder="חיפוש לפי בית ספר או עיר"
           type={"text"}
         />
-        {width > 900 ? (
+        {width > 1125 ? (
           <button
             className="search-button"
             onClick={() => {
@@ -71,7 +73,7 @@ const LeadersTable = ({ data, colums }) => {
         </thead>
         <tbody>
           {dataInfo.map((row, index) => {
-            if (width > 900) {
+            if (width > 1125) {
               return (
                 <tr key={index}>
                   <td>{<AvgGradePerAssigment lessons={row.lessons} />}</td>
@@ -88,18 +90,7 @@ const LeadersTable = ({ data, colums }) => {
                   <td>
                     <div>
                       <button onClick={handleWatchTasks}>צפייה במטלות</button>
-                      <AvgGradePerAssigment
-                        style={{
-                          position: "absolute",
-                          transform: "translateX(30%)",
-                          justifyContent: "space-between",
-                          width: "70%",
-                          background: "white",
-                          zIndex: "2",
-                          top: 0,
-                          display: "none",
-                          height : "50px",
-                        }}
+                      <AvgGradePerAssigment isForMobileTable
                         lessons={row.lessons}
                       />
                     </div>

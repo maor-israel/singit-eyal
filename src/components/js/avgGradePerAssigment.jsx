@@ -1,21 +1,21 @@
 import "../css/avgGradePerAssigment.css";
 
-const AssigmentsBadge = ({ assigment, index }) => {
+const AssigmentsBadge = ({ assigment, index, isForMobileTable }) => {
   return (
     <div className="avg-grade-per-assigment-center">
-      <div className="avg-grade-per-assigment">
+      <div className={isForMobileTable ? "avg-grade-per-assigment-mobile-table" : "avg-grade-per-assigment"}>
         {assigment.classAverage && assigment.classAverage}
       </div>
       <h4 style={{ margin: "auto" }}># {index && index}</h4>
     </div>
   );
 };
-const AvgGradePerAssigment = ({ lessons, ...htmlAttributes }) => {
+const AvgGradePerAssigment = ({ lessons, isForMobileTable , ...htmlAttributes }) => {
   return (
-    <div className="avg-grade-per-assigment-wrraper" {...htmlAttributes}>
+    <div className={isForMobileTable ? "avg-grade-per-assigment-wrraper-mobile-table" : "avg-grade-per-assigment-wrraper"} {...htmlAttributes}>
       {lessons.map((assigment, index) => {
         return (
-          <AssigmentsBadge assigment={assigment} index={index} key={index} />
+          <AssigmentsBadge isForMobileTable={isForMobileTable} assigment={assigment} index={index} key={index} />
         );
       })}
     </div>

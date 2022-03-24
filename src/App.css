@@ -26,20 +26,18 @@ tr {
 }
 
 .App {
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
   font-family: "Fredoka", sans-serif;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1125px) {
   tr {
-    border-top: 10px solid #f9f9f9;
-    border-bottom: 10px solid #f9f9f9;
-    margin : 10px 0;
+    line-height: 30px;
   }
 
   td {
-    border-top: 10px solid #f9f9f9;
-    border-bottom: 10px solid #f9f9f9;
+    border-top: 10px solid #f0f0f0;
+    border-bottom: 10px solid #f0f0f0;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
   }
