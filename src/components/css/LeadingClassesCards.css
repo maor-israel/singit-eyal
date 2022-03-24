@@ -1,5 +1,6 @@
 .card-wrrapper {
   position: relative;
+  margin : 10px;
 }
 
 .cards-main-div {
@@ -43,7 +44,7 @@
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 1125px) {
+@media only screen and (max-width: 1392px) {
   .leading-classes-wrrapper {
     flex-direction: column;
   }

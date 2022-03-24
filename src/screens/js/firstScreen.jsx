@@ -1,9 +1,7 @@
 import LeadingClasses from "../../components/js/leadingClasses";
-import LeadersTable from "../../components/js/table";
+import {LeadersTable} from "../../components/js/newTable";
 import useWindowDimensions from "../../helpers/screenDimentions";
-
 import "../css/firstScreen.css";
-// const isMobile = true;
 
 //dummy data
 const tableDummyData = [
@@ -91,24 +89,6 @@ const tableDummyData = [
       { classAverage: 80 },
     ],
   },
-];
-
-const dummyColumnsMobile = [
-  "מטלות",
-  "ציון סופי",
-  "תלמידים",
-  "כיתה",
-  "בית ספר",
-  "מקום",
-];
-
-const dummyColumns = [
-  "ציון ממוצע סופי",
-  "ציון ממוצע למטלה",
-  "תלמידים",
-  "כיתה",
-  "בית ספר",
-  "מקום",
 ];
 
 const cardsDummyData = [
@@ -233,8 +213,8 @@ const FirstScreen = () => {
       <br></br>
       <br></br>
       <LeadersTable
-        colums={width < 1125 ? dummyColumnsMobile : dummyColumns}
-        data={tableDummyData}
+        isMobile={width > 1125 ? false : true}
+        rows={tableDummyData}
       ></LeadersTable>
       <br></br>
       <br></br>

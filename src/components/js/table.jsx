@@ -61,53 +61,7 @@ const LeadersTable = ({ data, colums }) => {
         ) : (
           ""
         )}
-      </div>
-
-      <table id="table">
-        <thead id="table-head">
-          <tr id="table-head">
-            {colums.map((column, index) => (
-              <td key={index}>{column}</td>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {dataInfo.map((row, index) => {
-            if (width > 1125) {
-              return (
-                <tr key={index}>
-                  <td>{<AvgGradePerAssigment lessons={row.lessons} />}</td>
-                  <td>{<FinallAvgGrade isForTable grade={row.average} />}</td>
-                  <td>{row.studentsCount}</td>
-                  <td>{row.name}</td>
-                  <td>{row.schoolName}</td>
-                  <td>{index}</td>
-                </tr>
-              );
-            } else {
-              return (
-                <tr key={index}>
-                  <td>
-                    <div>
-                      <button onClick={handleWatchTasks}>צפייה במטלות</button>
-                      <AvgGradePerAssigment isForMobileTable
-                        lessons={row.lessons}
-                      />
-                    </div>
-                  </td>
-                  <td>{row.average}</td>
-                  <td>{row.studentsCount}</td>
-                  <td>{row.name}</td>
-                  <td>{row.schoolName}</td>
-                  <td>{index}</td>
-                </tr>
-              );
-            }
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
+      </div>);
 };
 
 export default LeadersTable;

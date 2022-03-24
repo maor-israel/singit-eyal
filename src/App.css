@@ -13,7 +13,7 @@ tr td:last-child {
 }
 #logo {
   text-align: right;
-  margin: 50px;
+  margin: 0 50px;
   font-size: 60px;
   color: #7a55b5;
   text-shadow: 0 0 8px #9b80c8;

@@ -35,7 +35,7 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
     height : "50px",
     padding: "10px",
     boxShadow: "0 0 4px black",
-    transform: "translateY(-10px)",
+    margin : "3px 0"
   };
 
 
