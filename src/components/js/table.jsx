@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import useWindowDimensions from "../../helpers/screenDimentions";
-import "../css/table.css";
 import AvgGradePerAssigment from "./avgGradePerAssigment";
 import FinallAvgGrade from "../js/finallAvgGrade";
+import "../css/table.css";
 
 const LeadersTable = ({ data, colums }) => {
 
@@ -44,7 +44,7 @@ const LeadersTable = ({ data, colums }) => {
         <input
           onBlur={onFinish}
           id="search-input"
-          placeholder="חיפוש לפי בית ספר או עיר"
+          placeholder={"חיפוש לפי בית ספר או עיר"}
           type={"text"}
         />
         {width > 1125 ? (

@@ -1,10 +1,29 @@
+tr {
+    background: white;
+    position: relative;
+}
+
+th,
+td {
+  border-top: 1.5px solid #7a55b5;
+  border-bottom: 1.5px solid #7a55b5;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+
+tr td:last-child {
+  border-left: 1px solid #7a55b5;
+}
+
 #table-head {
   background: #9b80c8;
 }
 
 #table {
   width: 100%;
-  margin: 50px auto;
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 0 8px #ded5ed;
   border-style: hidden;
@@ -23,10 +42,14 @@
   box-shadow: 0 0 8px #ded5ed;
   width: 40%;
   text-align: center;
+  text-align: right;
+  padding: 20px;
 }
 
 #search-input::placeholder {
-  text-align: center;
+  text-align: right;
+  padding: 20px;
+
 }
 
 .table-component-wrraper {
@@ -49,7 +72,7 @@
   padding: 10px;
   color: white;
   margin: 0 20px;
-  width: 20%;
+  width: 15%;
   cursor: pointer;
 }
 
@@ -68,6 +91,21 @@
 @media only screen and (max-width: 1125px) {
   .participating-classes-table-header {
     text-align: center;
+  }
+
+  tr {
+    line-height: 30px;
+  }
+
+  td {
+    border-top: 10px solid #f0f0f0;
+    border-bottom: 10px solid #f0f0f0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+
+  #table-head {
+      border-top: hidden;
   }
 
   .table-component-wrraper {
@@ -98,12 +136,13 @@
     border: none;
     box-shadow: 0 0 8px #ded5ed;
     width: 80%;
-    text-align: center;
+    text-align: right;
     margin: auto;
     line-height: 3rem;
   }
 
   #search-input::placeholder {
-    text-align: center;
+    text-align: right;
+    padding: 20px;
   }
 }

@@ -16,16 +16,16 @@
 .avg-grade-per-assigment-wrraper-mobile-table {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
-        margin: 10px;
+        /* margin: 10px; */
         position: absolute;
-        transform: translate(30%,-8.0%);
+        transform: translate(29%,12%);
         justify-content: space-between;
         width: 70%;
         background: white;
         z-index: 2;
-        top: 15%;
+        top: 12%;
         display: none;
-        height: 45px;
+        height: 48px;
 }
 
 .avg-grade-per-assigment-mobile-table {

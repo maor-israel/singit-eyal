@@ -16,7 +16,7 @@ const LeadingClassesCards = ({
     <div className="card-wrrapper">
       <h2 className="gifts">
         {place === 1
-          ? "5,000₪ לכיתה"
+          ? "5,000₪"
           : place === 2
           ? "אוזניות לכל הכיתה"
           : place === 3
