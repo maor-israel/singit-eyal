@@ -1,16 +1,3 @@
-table,
-th,
-td {
-  border-top: 1.5px solid #7a55b5;
-  border-bottom: 1.5px solid #7a55b5;
-  border-collapse: collapse;
-  padding: 10px;
-  text-align: center;
-}
-
-tr td:last-child {
-  border-left: 1px solid #7a55b5;
-}
 #logo {
   text-align: right;
   margin: 0 50px;
@@ -20,25 +7,7 @@ tr td:last-child {
   font-family: "Pacifico", cursive;
 }
 
-tr {
-  background: white;
-  position: relative;
-}
-
 .App {
   background-color: #f0f0f0;
   font-family: "Fredoka", sans-serif;
-}
-
-@media only screen and (max-width: 1125px) {
-  tr {
-    line-height: 30px;
-  }
-
-  td {
-    border-top: 10px solid #f0f0f0;
-    border-bottom: 10px solid #f0f0f0;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-  }
 }

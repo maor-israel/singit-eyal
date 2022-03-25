@@ -1,5 +1,5 @@
 import LeadingClasses from "../../components/js/leadingClasses";
-import {LeadersTable} from "../../components/js/newTable";
+import { LeadersTable } from "../../components/js/newTable";
 import useWindowDimensions from "../../helpers/screenDimentions";
 import "../css/firstScreen.css";
 
@@ -210,12 +210,15 @@ const FirstScreen = () => {
       </div>
 
       <LeadingClasses classes={cardsDummyData} />
+
       <br></br>
       <br></br>
+
       <LeadersTable
         isMobile={width > 1125 ? false : true}
         rows={tableDummyData}
       ></LeadersTable>
+
       <br></br>
       <br></br>
     </>

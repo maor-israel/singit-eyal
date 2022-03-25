@@ -5,7 +5,6 @@ import medal from "../../assets/meal.png";
 
 const LeadingClassesCards = ({
   schoolName,
-  gift,
   name,
   studentsCount,
   finallGrade,

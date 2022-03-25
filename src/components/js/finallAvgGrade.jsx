@@ -3,7 +3,7 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
 
   const tableStylesWrraper = { display: "flex", justifyContent: "center" };
 
-  const regularStylesWrraper = {
+  const cardsStylesWrraper = {
     position: "absolute",
     display: "flex",
     justifyContent : "center",
@@ -11,7 +11,7 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
     transform : "translateX(-7%)"
   };
 
-  const regularStylesMainDiv = {
+  const cardsStylesCircle = {
     borderRadius: "90px",
     color: "#7A55B5",
     background: "white",
@@ -24,7 +24,7 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
     fontSize : "25px"
   };
 
-  const tableStylesMainDiv = {
+  const tableStylesCircle = {
     borderRadius: "90px",
     display: "flex",
     justifyContent: "center",
@@ -41,8 +41,8 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
 
 
   return (
-    <div style={isForTable ? tableStylesWrraper : regularStylesWrraper}>
-      <div style={isForTable ? tableStylesMainDiv : regularStylesMainDiv}>
+    <div style={isForTable ? tableStylesWrraper : cardsStylesWrraper}>
+      <div style={isForTable ? tableStylesCircle : cardsStylesCircle}>
         {grade}
       </div>
     </div>
