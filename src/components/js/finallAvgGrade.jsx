@@ -1,14 +1,13 @@
+import whatColor from "../../helpers/whatColor";
 const FinallAvgGrade = ({ grade, isForTable = false }) => {
-
-
   const tableStylesWrraper = { display: "flex", justifyContent: "center" };
 
   const cardsStylesWrraper = {
     position: "absolute",
     display: "flex",
-    justifyContent : "center",
-    width : "100%",
-    transform : "translateX(-7%)"
+    justifyContent: "center",
+    width: "100%",
+    transform: "translateX(-7%)",
   };
 
   const cardsStylesCircle = {
@@ -16,12 +15,12 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
     color: "#7A55B5",
     background: "white",
     width: "60px",
-    height : "60px",
+    height: "60px",
     boxShadow: "0 0 3px #DED5ED",
-    display : "flex",
-    justifyContent : "center",
-    alignItems : "center",
-    fontSize : "25px"
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "25px",
   };
 
   const tableStylesCircle = {
@@ -30,15 +29,13 @@ const FinallAvgGrade = ({ grade, isForTable = false }) => {
     justifyContent: "center",
     alignItems: "center",
     color: "white",
-    background: "#7A55B5",
+    background: whatColor(grade),
     width: "50px",
-    height : "50px",
+    height: "50px",
     padding: "10px",
     boxShadow: "0 0 4px black",
-    margin : "3px 0"
+    margin: "3px 0",
   };
-
-
 
   return (
     <div style={isForTable ? tableStylesWrraper : cardsStylesWrraper}>

@@ -1,9 +1,12 @@
 import "../css/avgGradePerAssigment.css";
-
+import whatColor from "../../helpers/whatColor";
 const AssigmentsBadge = ({ assigment, index, isForMobileTable }) => {
+ 
+  
   return (
     <div className="avg-grade-per-assigment-center">
       <div
+      style={{background : whatColor(assigment.classAverage)}}
         className={
           isForMobileTable
             ? "avg-grade-per-assigment-mobile-table"
