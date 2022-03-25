@@ -1,5 +1,4 @@
 import "./App.css";
-import "antd/dist/antd.css";
 import FirstScreen from "./screens/js/firstScreen";
 
 function App() {
