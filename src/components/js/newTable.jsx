@@ -4,7 +4,7 @@ import AvgGradePerAssigment from "./avgGradePerAssigment";
 import FinallAvgGrade from "./finallAvgGrade";
 import useWindowDimensions from "../../helpers/screenDimentions";
 
-const TableCell = ({ data, isLessons, isHeader, isMobile, isAverage }) => {
+const TableCell = ({ data, isLessons, isHeader, isMobile, isAverage, isBordered }) => {
   const handleClick = (e) => {
     e.target.parentElement.lastChild.style.display === "flex"
       ? (e.target.parentElement.lastChild.style.display = "none")
@@ -85,7 +85,7 @@ const TableRow = ({ row, isMobile, index, isHeader }) => {
           <TableCell isMobile={isMobile} isAverage data={row.average} />
           <TableCell isMobile={isMobile} data={row.studentsCount} />
           <TableCell isMobile={isMobile} data={row.schoolName} />
-          <TableCell isMobile={isMobile} data={index} />
+          <div className="mobile-place">{index}</div>
         </div>
       );
     } else {
@@ -96,7 +96,7 @@ const TableRow = ({ row, isMobile, index, isHeader }) => {
           <TableCell isMobile={isMobile} data={row.studentsCount} />
           <TableCell isMobile={isMobile} data={row.name} />
           <TableCell isMobile={isMobile} data={row.schoolName} />
-          <TableCell isMobile={isMobile} data={index} />
+          <TableCell isBordered isMobile={isMobile} data={index} />
         </div>
       );
     }
@@ -124,7 +124,6 @@ const LeadersTable = ({ rows, isMobile }) => {
 
   const columns = isMobile
     ? {
-        place: "מקום",
         lessons: "מטלות",
         average: "ציון ממוצע",
         studentsCount: "תלמידים",

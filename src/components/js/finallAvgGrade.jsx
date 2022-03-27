@@ -1,26 +1,30 @@
 import whatColor from "../../helpers/whatColor";
+import useWindowDimensions from "../../helpers/screenDimentions"
 const FinallAvgGrade = ({ grade, isForTable = false }) => {
   const tableStylesWrraper = { display: "flex", justifyContent: "center" };
-
+  const {width} = useWindowDimensions();
+  
   const cardsStylesWrraper = {
     position: "absolute",
     display: "flex",
     justifyContent: "center",
     width: "100%",
-    transform: "translateX(-7%)",
+    transform: width > 1125 ? "translateX(-40px)"  :"translate(-40px,-25px)",
   };
 
   const cardsStylesCircle = {
     borderRadius: "90px",
     color: "#7A55B5",
     background: "white",
-    width: "60px",
-    height: "60px",
+    width: width > 1125 ? "60px" : "80px",
+    height: width > 1125 ? "60px" : "80px",
     boxShadow: "0 0 3px #DED5ED",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: "25px",
+    fontSize: "35px",
+    margin : width > 1125 ?  "" : "2px auto",
+    padding : width > 1125 ? "" : "10px"
   };
 
   const tableStylesCircle = {

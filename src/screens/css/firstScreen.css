@@ -9,6 +9,10 @@
     margin :20px auto;
     cursor: pointer;
     display:none;
+    width: 70%;
+    height: 60px;
+    font-size: 35px;
+    
   }
 
 
