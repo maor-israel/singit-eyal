@@ -19,7 +19,7 @@ const LeadingClassesCards = ({
           : place === 2
           ? "אוזניות לכל הכיתה"
           : place === 3
-          ? "כרגע כלום ושום דבר"
+          ? "text"
           : null}
       </h2>
 
